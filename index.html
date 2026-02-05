@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVITIC - Servicios Tecnológicos</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 20%;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav {
+    width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+section:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servicio-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-card h3 {
+    color: #764ba2;
+    margin-bottom: 1rem;
+}
+
+/* Quiénes somos */
+.sobre-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-nosotros p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo, nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">SERVITIC</div>
+                <nav>
+                    <ul>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Quiénes somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <article class="servicio-card">
+                    <h3>Mantenimiento Informático</h3>
+                    <p>Servicio técnico especializado para mantener tus equipos en perfecto estado. Prevención y solución de problemas.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Soporte Tecnológico</h3>
+                    <p>Asistencia técnica profesional para resolver cualquier incidencia. Disponibilidad 24/7 para tu tranquilidad.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Consultoría IT</h3>
+                    <p>Asesoramiento experto para optimizar tu infraestructura tecnológica y mejorar la productividad de tu empresa.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <div class="container">
+            <h2>Quiénes Somos</h2>
+            <div class="sobre-nosotros">
+                <p>SERVITIC es una empresa líder en servicios tecnológicos y mantenimiento informático con más de 10 años de experiencia en el sector.</p>
+                <p>Nuestro equipo de profesionales altamente cualificados se dedica a proporcionar soluciones tecnológicas innovadoras y eficientes para empresas de todos los tamaños.</p>
+                <p>Nos comprometemos a ofrecer un servicio de calidad, cercano y personalizado, adaptándonos a las necesidades específicas de cada cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form class="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Email:</strong> contacto@servitic.es</p>
+                    <p><strong>Teléfono:</strong> +34 900 123 456</p>
+                </div>
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#privacidad">Política de Privacidad</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                        <li><a href="#aviso">Aviso Legal</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
